@@ -1,11 +1,10 @@
 clear all;
 %% Parameter Data
-m=1;
-d3=0.7*m;
-r1=0.5*m;
-r4=0.2*m;
+d3=0.7;
+r1=0.5;
+r4=0.2;
 global rE;
-rE=0.1*m;
+rE=0.1;
 
 %% initialize values
 global angles_alpha;
