@@ -36,3 +36,8 @@ disp(rotvec)
 disp('Rotation angle')
 rotangle= rotparam(4);
 disp(rotangle)
+
+%% Plot
+figure(1)
+PlotFrame(qi);
+PlotFrame(qf);
