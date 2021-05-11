@@ -14,7 +14,7 @@ for i = 1:6
     
     J=[J temp];
 end
-disp('end')
+%disp('end')
 
 
 end
