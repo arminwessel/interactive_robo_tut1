@@ -27,6 +27,7 @@ while(true)
     
     if (err(k)<eps) % result found
         %disp('Result found');
+%         plot_q(q,pi*[-1,-0.5,-1,-1,-0.5,-1],pi/2*[1,1,0,1,1,1], 'IGM_q_i', false);
         return;
     end
     
@@ -40,5 +41,4 @@ while(true)
     q_best = q(:,end);
     
 end
-
 end

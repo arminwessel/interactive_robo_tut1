@@ -16,7 +16,7 @@ hold on
 plot3([origin(1), scale*base_y(1)],[origin(2), scale*base_y(2)],[origin(3), scale*base_y(3)],'Color',[0,1,0],'LineWidth',2);
 plot3([origin(1), scale*base_z(1)],[origin(2), scale*base_z(2)],[origin(3), scale*base_z(3)],'Color',[0,0,1],'LineWidth',2);
 
-g_0E=ComputeDGM(angles_alpha,distances_d,q,distances_r);
+g_0E=ComputeDGM(angles_alpha,distances_d,q+[0;0;pi/2;0;0;0],distances_r);
 new_origin = g_0E*origin;
 new_x = g_0E*base_x;
 new_y = g_0E*base_y;

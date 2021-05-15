@@ -10,7 +10,7 @@ k_max=100;
 eps=0.0001;
 
 [q_i, err_i] = ComputeIGM(X_d_i, q_0_i, k_max, eps);
-figure(1)
+figure()
 p1=plot(linspace(1,length(err_i),length(err_i)), err_i);
 p1.LineWidth = 2;
 p1.Marker = 'o';
@@ -28,11 +28,12 @@ err_i=X_d_i-f_q_i
 %% Q8/2
 X_d_f = [0.64;-0.1;1.14];
 q_0_f = [0;0.8;0;1;2;0];
+%q_0_f = [0;0.8;-0.3;1.5;1.5;0]; better starting config
 k_max=100;
 eps=0.001;
 
 [q_f, err_f] = ComputeIGM(X_d_f, q_0_f, k_max, eps);
-figure(2)
+figure()
 p1=plot(linspace(1,length(err_f),length(err_f)), err_f);
 p1.LineWidth = 2;
 p1.Marker = 'o';

@@ -1,4 +1,4 @@
-clear all;
+%clear all;
 %% Parameter Data
 d3=0.7;
 r1=0.5;
