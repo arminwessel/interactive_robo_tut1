@@ -16,9 +16,12 @@ X_d_k = [linspace(X_d_i(1),X_d_f(1),num_steps);...
 hold on
 plot3(X_d_k(1,:),X_d_k(2,:),X_d_k(3,:));
 qdk = ComputeIKM(X_d_i, X_d_f, V, Te, q_i);
-downsample_qdk = qdk(:,1:380:end);
+% plot the image for question 9
+if (false) % true = plot
+downsample_qdk = qdk(:,1:20:end);
 for i=1:length(downsample_qdk(1,:))
    PlotFrame(downsample_qdk(:,i)); 
+end
 end
 
 %% Question 10
@@ -30,7 +33,7 @@ plot_q(qdk,qmin,qmax, 'IKM_Question_10', true);
 end
 
 %% Check trajectory
-if (false)
+if (true)
 Traj = zeros(3,length(qdk));
 for i=1:length(qdk)
     theta = qdk(:,i) + [0;0;pi/2;0;0;0];
@@ -52,9 +55,15 @@ qmin=pi*[-1,-0.5,-1,-1,-0.5,-1];
 qmax=pi/2*[1,1,0,1,1,1];
 
 qdk = ComputeIKMlimits(X_d_i, X_d_f, V, Te, q_i, qmin, qmax);
-
+% plot similar image like the image for question 9
+if (true) % true = plot
+downsample_qdk = qdk(:,1:20:end);
+for i=1:length(downsample_qdk(1,:))
+   PlotFrame(downsample_qdk(:,i)); 
+end
+end
 if (true)
-plot_q(qdk,qmin,qmax, 'IKM_Question_11', false);
+plot_q(qdk,qmin,qmax, 'IKM_Question_11', true);
 end
 
 %% Check trajectory
